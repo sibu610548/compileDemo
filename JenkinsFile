@@ -3,14 +3,14 @@ pipeline {
           jdk 'JAVA_HOME'
           maven 'M2_HOME'
         }
-    agent {label 'wislave'}
+    agent {label 'winslave'}
     stages {
         stage('checkout') {
             steps {
                 git 'https://github.com/sibu610548/compileDemo.git'
             }
         }
-        stage('Compile') {
+        stage('compile') {
             steps {
                 bat 'mvn compile'
             }
