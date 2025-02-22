@@ -24,4 +24,4 @@ pipeline {
             steps {
                 bat 'mvn package'
     }
-}
+}}
