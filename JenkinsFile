@@ -1,0 +1,27 @@
+pipeline {
+    tools{
+          jdk 'JAVA_HOME1'
+          maven 'M2_HOME1'
+        }
+    agent {label 'wislave'}
+    stages {
+        stage('checkout') {
+            steps {
+                git 'https://github.com/sibu610548/compileDemo.git'
+            }
+        }
+        stage('Compile') {
+            steps {
+                bat 'mvn compile'
+            }
+        }
+        stage('test') {
+            steps {
+                bat 'mv test'
+            }
+        }
+        stage('package'){
+            steps {
+                bat 'mvn package'
+    }
+}
