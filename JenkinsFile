@@ -1,7 +1,7 @@
 pipeline {
     tools{
-          jdk 'Linux-java'
-          maven 'Maven-linux'
+          jdk 'JAVA-HOME'
+          maven 'M2-HOME-WIN'
         }
     agent {label 'winslave'}
     stages {
